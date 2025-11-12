@@ -1,4 +1,4 @@
-import hero1 from "../assets/images/hero1.jpg"
+import hero1 from "../assets/images/hero1.JPG";
 
 export const AboutSection = () => {
     return <section id="about" className="py-2 px-4 relative">
