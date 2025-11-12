@@ -1,6 +1,6 @@
-import easyvote from "../../public/projects/easyvote.png";
-import digipay from "../../public/projects/digipay.png";
-import climaxssd from "../../public/projects/climaxssd.png";
+import easyvote from "../../public/projects/easyvote.PNG";
+import digipay from "../../public/projects/digipay.PNG";
+import climaxssd from "../../public/projects/climaxssd.PNG";
 import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
