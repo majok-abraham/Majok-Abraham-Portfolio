@@ -2,7 +2,7 @@ import html from "../assets/skillsIcons/html-icon.svg";
 import css from "../assets/skillsIcons/css.svg";
 import bootstrap from "../assets/skillsIcons/bootstrap.svg";
 import reactIcon from "../assets/skillsIcons/react.svg";
-import typeScript from "../assets/skillsIcons/typeScript.svg";
+import typeScript from "../assets/skillsIcons/typescript.svg";
 import tailwindcss from "../assets/skillsIcons/tailwindcss.svg";
 import nextjs from "../assets/skillsIcons/nextjs.svg";
 import nodejs from "../assets/skillsIcons/nodejs.svg";
@@ -32,7 +32,7 @@ const skills = [
         { name: <img src={typeScript} alt="" width={70} height={70} />, category: "frontend"},
         { name: <img src={tailwindcss} alt="" width={70} height={70} />, category: "frontend"},
         { name: <img src={nextjs} alt="" width={70} height={70} />, category: "frontend"},
-        { name: <img src={wordpress} alt="" width={70} height={70} />,  category:"frontend",},
+        { name: <img src={wordpress} alt="" width={70} height={70} />,  category: "frontend",},
 
          //backend
         { name: <img src={nodejs} alt="" width={70} height={70} />, category: "backend"},

@@ -1,13 +1,16 @@
-import easyvote from "../../public/projects/easyvote.png";
-import digipay from "../../public/projects/digipay.png";
-import climaxssd from "../../public/projects/climaxssd.png";
-import { ExternalLink, Github } from "lucide-react";
+import easyvote from "/projects/easyvote.PNG";
+import digipay from "/projects/digipay.PNG";
+import climaxssd from "/projects/climaxssd.PNG";
+import { ExternalLink, Github, Info, InfoIcon } from "lucide-react";
+import { useState } from "react";
+import { Close } from "@radix-ui/react-toast";
+import { IoClose } from "react-icons/io5";
 
 const projects = [
     {
         id: 1,
         title: "EasyVote: An online Voting System",
-        description: "A fast and secure user-friendly system that ensures transparency and efficiency in voting",
+        description: "A fast and secure user-friendly system that ensures transparency and efficiency in voting. Key features in voter registration, voter authentication during voting, automatic votes tallying, provisional results display during voting and final results diplay showing total votes and percentage of each candidate, results summary of each candidate, printing of results.",
         image: easyvote,
         tags: ["Laravel", "JavaScript", "Bootstrap", "MySQL"],
         demoUrl: "#",
@@ -26,7 +29,7 @@ const projects = [
 
      {
         id: 2,
-        title: "Payment System for Internet Point-to-point clients",
+        title: "Payment monitoring system for Internet Point-to-point clients",
         description: "A payment system which automate the shuting down the CISCO interface connecting the client and send deactivation notification via SMS and Email when the payment expires. Also sends a reminder via email and SMS 5 days before payment expiry",
         image: digipay,
         tags: ["ExpressJS", "Python", "JavaScript", "TypeScript", "TypeORM", "Bootstrap", "MySQL"],
@@ -38,6 +41,8 @@ const projects = [
 
 ]
 export const ProjectSection = () => {
+    const [selectedProject, setSelectedProject] = useState(null);
+
     return <section id="projects" className="py-24 px-4 relative">
         <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Featured <span className="text-primary">Projects</span></h2>
@@ -57,21 +62,50 @@ export const ProjectSection = () => {
                                         <span className="bg-primary text-primary-foreground rounded-full px-1"> {tag} </span>
                                     ))}
                                 </div>
-                            
-
-                            <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                            <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-
-                            <div className="flex justify-between items-center">
-                                <div className="flex space-x-3 relative bottom-0">
-                                        <a href={project.demoUrl}  target="__blank" className="text-foreground/80 hover:text-primary transition-colors duration-300"> <ExternalLink /> </a>
-                                        <a href={project.demoUrl}  target="__blank"  className="text-foreground/80 hover:text-primary transition-colors duration-300"> <Github /> </a>
-                                </div>
+                            <h5 className="text-xl font-semibold mb-1">{project.title}</h5>
+                          
 
                             </div>
-                            </div>
+                            {/* Toggle button */}
+                            <button
+                                onClick={() => setSelectedProject(project)}
+                                className="px-2 hover:bg-primary rounded-full"
+                            >
+                               <InfoIcon />
+                            </button>
                     </div>
                 ))}
+
+                   {/* start description Modal */}
+                      
+
+{selectedProject && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full shadow-xl">
+                
+            <h2 className="text-xl font-semibold mb-3">
+              {selectedProject.title}
+              <button className="relative px-5 top-1 cursor-pointer" onClick={() => setSelectedProject(null)}> <IoClose /> </button>
+            </h2>
+             
+
+            <p className="text-gray-700">
+              {selectedProject.description}
+            </p>
+
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="mt-5 p-3 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+            >
+              Close
+            </button>
+           
+          </div>
+          
+        </div>
+      )}
+                {/* end description modal */}
+
             </div>
         </div>
 

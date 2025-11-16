@@ -11,16 +11,16 @@ export const HeroSection = () => {
 
                         <div className="space-y-6">
                         
-                            <h1 className="text-4xl max-md:text-2xl font-bold tracking-light">
+                            <h3 className="text-4xl max-md:text-2xl font-bold tracking-light">
                                 
                                 <span className="opacity-0 animate-fade-in">Hi, I'm</span>
                                 <span className="text-primary opacity-0 animate-fade-in-delay-1"> {" "}Majok</span>
                                 <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">{" "} Abraham</span>
-                            </h1> 
-                            <p className="ml-5 text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-2">
-                                I provide end-to-end full-stack development, ensuring a cohesive and efficient build 
-                                process from frontend design to backend deployment. 
-                                I leverage modern technologies to build innovative solutions that make an impact.
+
+                            </h3> 
+                            <h4 className="font-bold">Software Engineer • Cybersecurity Enthusiast</h4>
+                            <p className="ml-5 text-lg md:text-xl text-muted-foreground max-2-2xl ml-auto opacity-0 animate-fade-in-delay-2">
+                               A full-stack developer specializing in mordern web technologies to build secure, scalable and responsive soluations.
                             </p> 
 
                             <div className="md:text-5 flex max-md:flex-col opacity-0 pt-5 animate-fade-in-delay-4">
