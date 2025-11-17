@@ -1,5 +1,6 @@
 import easyvote from "/projects/easyvote.PNG";
 import digipay from "/projects/digipay.PNG";
+import digiResult from "/projects/digiResult.PNG";
 import climaxssd from "/projects/climaxssd.PNG";
 import { ExternalLink, Github, Info, InfoIcon } from "lucide-react";
 import { useState } from "react";
@@ -19,18 +20,18 @@ const projects = [
 
     {
         id: 2,
-        title: "General Trading company website",
-        description: "A modern website for general trading company using WordPress to showcase their services",
-        image: climaxssd,
-        tags: ["WordPress"],
-        demoUrl: "https://climaxssd.com/",
+        title: "Dashboard for USSD App",
+        description: "A modern admin dashboard as part of a USSD application on the Digitel mobile network. The USSD app is used by students and the public to access the South Sudan primary and secondary leaving examination results via SMS upon release. Key features of the admin dashboard include excel upload of results, analysis of data, setting functionality to set prices and SMPP account details, usage and revenue report.",
+        image: digiResult,
+        tags: ["ExpressJS", "NodeJS", "Bootstrap", "JavaScript", "MySQL"],
+        demoUrl: "",
         githubUrl: "#"
     },
 
      {
         id: 2,
         title: "Payment monitoring system for Internet Point-to-point clients",
-        description: "A payment system which automate the shuting down the CISCO interface connecting the client and send deactivation notification via SMS and Email when the payment expires. Also sends a reminder via email and SMS 5 days before payment expiry",
+        description: "An automated system to monitor point-to-point corporate internet clients. It is used to make payments for clients, payment then triggers the system to automatically enable client’s CISCO router interface connecting the client to allow internet usage. The system also notifies via email and SMS when their payment is five days from expiry, and automatically shut down their CISCO router interface when the payment expires, and send email SMS termination email.",
         image: digipay,
         tags: ["ExpressJS", "Python", "JavaScript", "TypeScript", "TypeORM", "Bootstrap", "MySQL"],
         demoUrl: "#",
@@ -69,9 +70,9 @@ export const ProjectSection = () => {
                             {/* Toggle button */}
                             <button
                                 onClick={() => setSelectedProject(project)}
-                                className="px-2 hover:bg-primary rounded-full"
+                                className="flex flex-wrap gap-2 mb-4 text-1xl bg-primary p-1 rounded-full"
                             >
-                               <InfoIcon />
+                              <Info />Info
                             </button>
                     </div>
                 ))}
@@ -83,11 +84,21 @@ export const ProjectSection = () => {
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg p-6 max-w-md w-full shadow-xl">
                 
-            <h2 className="text-xl font-semibold mb-3">
-              {selectedProject.title}
-              <button className="relative max-md:px-  px-5 top-1 cursor-pointer" onClick={() => setSelectedProject(null)}> <IoClose /> </button>
-            </h2>
-             
+        
+        {/* Header: Title + Close Icon */}
+                    <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-xl font-semibold text-gray-900">
+                        {selectedProject.title}
+                    </h2>
+
+                    <button
+                        onClick={() => setSelectedProject(null)}
+                        className="text-gray-500 hover:text-gray-800 cursor-pointer"
+                    >
+                        <IoClose size={28} color="red"/>
+                    </button>
+                    </div>
+      
 
             <p className="text-gray-700">
               {selectedProject.description}
@@ -95,7 +106,7 @@ export const ProjectSection = () => {
 
             <button
               onClick={() => setSelectedProject(null)}
-              className="mt-5 p-3 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+              className="mt-5 p-3 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 cursor-pointer"
             >
               Close
             </button>
