@@ -70,7 +70,7 @@ export const ProjectSection = () => {
                             {/* Toggle button */}
                             <button
                                 onClick={() => setSelectedProject(project)}
-                                className="flex flex-wrap gap-2 mb-4 text-1xl bg-primary p-1 rounded-full"
+                                className="flex flex-wrap gap-2 mb-4 text-1xl ml-3 bg-primary p-1 rounded-full"
                             >
                               <Info />Info
                             </button>
