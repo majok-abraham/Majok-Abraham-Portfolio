@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react"
 import hero1 from "../assets/images/hero3.jpg"
+import myResume from "/Resume-Majok_Abraham_Ayii.pdf"
 
 export const HeroSection = () => {
     return <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center">
@@ -25,7 +26,7 @@ export const HeroSection = () => {
 
                             <div className="md:text-5 flex max-md:flex-col opacity-0 pt-5 animate-fade-in-delay-4">
                                 <a href="#contact" className="nice-button md:ml-20 max-md:px-0 max-md:ml-0">Get In Touch</a>
-                                <a href="" className="nice-button md:ml-10 max-md:mt-6">Download CV</a>
+                                <a href={myResume} className="nice-button md:ml-10 max-md:mt-6">Download Resume</a>
                             </div>
                         </div>
                     </div>

@@ -85,7 +85,7 @@ export const ProjectSection = () => {
                 
             <h2 className="text-xl font-semibold mb-3">
               {selectedProject.title}
-              <button className="relative px-5 top-1 cursor-pointer" onClick={() => setSelectedProject(null)}> <IoClose /> </button>
+              <button className="relative max-md:px-  px-5 top-1 cursor-pointer" onClick={() => setSelectedProject(null)}> <IoClose /> </button>
             </h2>
              
 

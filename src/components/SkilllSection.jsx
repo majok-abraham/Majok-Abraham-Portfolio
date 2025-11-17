@@ -14,7 +14,7 @@ import postgres from "../assets/skillsIcons/postgresql.svg";
 import gitIcon from "../assets/skillsIcons/git.svg";
 import github from "../assets/skillsIcons/github.svg";
 import dockerIcon from "../assets/skillsIcons/docker.svg";
-import vscode from "../assets/skillsIcons/vsCode.svg";
+import splunk from "../assets/skillsIcons/splunk.jpeg";
 import javascript from "../assets/skillsIcons/javascript.svg";
 import wordpress from "../assets/skillsIcons/wordpress.svg";
 import php from "../assets/skillsIcons/php.svg";
@@ -47,7 +47,7 @@ const skills = [
         { name: <img src={gitIcon} alt="" width={70} height={70} />, category: "tools"},
         { name: <img src={github} alt="" width={70} height={70} />, category: "tools"},
         { name: <img src={dockerIcon} alt="" width={70} height={70} />, category: "tools"},
-        { name: <img src={vscode} alt="" width={70} height={70} />, category: "tools"},
+        { name: <img src={splunk} alt="" width={70} height={70} />, category: "tools"},
 ]
 
 const categories = ["all", "frontend", "backend", "tools"];

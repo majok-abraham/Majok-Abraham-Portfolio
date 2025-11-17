@@ -1,6 +1,17 @@
 import hero1 from "../assets/images/hero1.JPG"
+import myResume from "/Resume-Majok_Abraham_Ayii.pdf"
 
 export const AboutSection = () => {
+
+    const downloadResume = (url) => {
+        const aTag = document.createElement("a");
+        aTag.href = url;
+        aTag.setAttribute("Download", "Resume-Majok_Abraham_Ayii.pdf")
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+
+    }
     return <section id="about" className="py-2 px-4 relative">
         {" "}
         <div className="container mx-auto max-w-5xl">
@@ -31,7 +42,7 @@ export const AboutSection = () => {
 
                         <div className="md:text-5 flex max-md:flex-col items-center justify-center opacity-0 animate-fade-in-delay-4">
                             <a href="#contact" className="nice-button max-md:ml-0">Get In Touch</a>
-                            <a href="" className="nice-button md:ml-10 max-md:mt-10">Download CV</a>
+                            <a href={myResume} className="nice-button md:ml-10 max-md:mt-10">Download Resume</a>
                         </div>
 
                     </div>
