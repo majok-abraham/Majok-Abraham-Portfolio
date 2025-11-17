@@ -26,7 +26,7 @@ export const HeroSection = () => {
 
                             <div className="md:text-5 flex max-md:flex-col opacity-0 pt-5 animate-fade-in-delay-4">
                                 <a href="#contact" className="nice-button md:ml-20 max-md:px-0 max-md:ml-0">Get In Touch</a>
-                                <a href={myResume} className="nice-button md:ml-10 max-md:mt-6">Download Resume</a>
+                                <a href={myResume} download="Resume-Majok_Abraham_Ayii.pdf" className="nice-button md:ml-10 max-md:mt-6">Download Resume</a>
                             </div>
                         </div>
                     </div>
